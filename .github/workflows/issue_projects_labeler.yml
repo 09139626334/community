@@ -1,22 +1,23 @@
-name: issue and project labeler
-
-on:
-  discussion:
-    types: [created]
+نام:  شماره و برچسب گذاری پروژه
+mohammadjavad 
+on:a
+scussion:rd
+ انواع : [خلق شده]اتحاد
+ و با هم بودن
 
 permissions:
-  discussion: write
-  contents: read
+ بحث : مخزن
+ محتویات :  می خواند
 
-jobs:
-  label-templated-discussion:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get selected feature area
+شغل:آزاد
+ برچسب-بندی :
+    runs-on:  دآخرین باری
+  قدم:e
+        -   نام :   noمنطقهٔ ویژگی انتخاب شده
         id: get_selected_feature_area
         uses: actions/github-script@v6
         with:
-          result-encoding: string
+ نتیجه گیری :نويسنده  رشته
           script: |
             const discussionBody = context.payload.discussion.body;
             console.log("discussion Body:", discussionBody);
